@@ -21,6 +21,19 @@ class MainActivity : AppCompatActivity() {
         databinding2.button6
         databinding2.button6.setOnClickListener {
             val intent = Intent(this,Places::class.java)
+            intent.putExtra("boton6","Tikal")
+            startActivity(intent)
+        }
+        databinding2.button7
+        databinding2.button7.setOnClickListener {
+            val intent = Intent(this,Places::class.java)
+            intent.putExtra("boton7","Antigua")
+            startActivity(intent)
+        }
+        databinding2.button8
+        databinding2.button8.setOnClickListener {
+            val intent = Intent(this,Places::class.java)
+            intent.putExtra("boton8","Semuc")
             startActivity(intent)
         }
     }
