@@ -1,12 +1,11 @@
-package com.example.laboratorio3final
+package com.example.laboratorio3final.Activities
 
 
 import android.content.Intent
-import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.example.laboratorio3final.R
 import com.example.laboratorio3final.databinding.ActivityPlacesBinding
 import com.example.laboratorio3final.models.Modelo
 
@@ -18,9 +17,15 @@ class Places : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //Create the objects for the places
-        val prueba =Modelo(getString(R.string.tikal), getString(R.string.phrase1),getString(R.string.descripcion1))
-        val prueba1=Modelo(getString(R.string.antigua), getString(R.string.phrase2),getString(R.string.descripcion2))
-        val prueba2=Modelo(getString(R.string.semuc), getString(R.string.phrase3),getString(R.string.descripcion3))
+        val prueba =Modelo(getString(R.string.tikal), getString(R.string.phrase1),getString(
+            R.string.descripcion1
+        ))
+        val prueba1=Modelo(getString(R.string.antigua), getString(R.string.phrase2),getString(
+            R.string.descripcion2
+        ))
+        val prueba2=Modelo(getString(R.string.semuc), getString(R.string.phrase3),getString(
+            R.string.descripcion3
+        ))
 
         super.onCreate(savedInstanceState)
 
@@ -29,7 +34,7 @@ class Places : AppCompatActivity() {
         )
         //Comment button
         binding1.button5.setOnClickListener {
-            val intent=Intent(this,MainActivity::class.java)
+            val intent=Intent(this, MainActivity::class.java)
             intent.putExtra("comentario",binding1.editText.text.toString())
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)

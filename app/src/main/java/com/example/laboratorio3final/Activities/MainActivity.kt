@@ -1,4 +1,4 @@
-package com.example.laboratorio3final
+package com.example.laboratorio3final.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 
 import androidx.databinding.DataBindingUtil
+import com.example.laboratorio3final.R
 import com.example.laboratorio3final.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +19,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        databinding2= DataBindingUtil.setContentView(this,R.layout.activity_main)
+        databinding2= DataBindingUtil.setContentView(this,
+            R.layout.activity_main
+        )
         databinding2.star
         databinding2.star.setOnClickListener{
             switch_state()
@@ -26,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         databinding2.tikalButton
         databinding2.tikalButton.setOnClickListener {
-            val intent = Intent(this,Places::class.java)
+            val intent = Intent(this, Places::class.java)
             intent.putExtra("boton6","Tikal")
 
             startActivity(intent)
@@ -34,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
         databinding2.antiguaButton
         databinding2.antiguaButton.setOnClickListener {
-            val intent = Intent(this,Places::class.java)
+            val intent = Intent(this, Places::class.java)
             intent.putExtra("boton7","Antigua")
 
             startActivity(intent)
@@ -43,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         databinding2.semucButton
         databinding2.semucButton.setOnClickListener {
 
-            val intent = Intent(this,Places::class.java)
+            val intent = Intent(this, Places::class.java)
             intent.putExtra("boton8","Semuc")
 
             startActivity(intent)
