@@ -6,7 +6,8 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <ImageView
         android:id="@+id/imageView3"
@@ -23,26 +24,20 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/lugaresturisticos" />
 
-
-    <ImageButton
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/star"
-        android:layout_width="70dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/round"
-        android:clickable="false"
-        android:tint="#00521111"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        android:layout_width="55dp"
+        android:layout_height="62dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.921"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.16000003"
         app:srcCompat="@drawable/ic_star" />
+
 
     <TextView
         android:id="@+id/textView3"
@@ -52,7 +47,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp"
         android:text="@string/nombre"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toTopOf="@+id/tikal_button"
         app:layout_constraintEnd_toStartOf="@+id/editText2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
@@ -68,9 +64,12 @@
         android:hint="@string/nombre"
         android:inputType="textPersonName"
         android:text=""
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3" />
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/name_set"
@@ -82,13 +81,14 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text=""
+        android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/tikal_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.31" />
+        app:layout_constraintVertical_bias="0.36" />
 
     <TextView
         android:id="@+id/descriptionApp"
@@ -99,7 +99,8 @@
         android:layout_marginBottom="8dp"
         android:text="@string/esta_app"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toTopOf="@+id/antigua_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +108,7 @@
         app:layout_constraintVertical_bias="0.31" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/tikal_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -115,12 +116,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="@string/tikal"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button7"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/antigua_button"
+        app:layout_constraintEnd_toStartOf="@+id/antigua_button"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/antigua_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -130,11 +131,11 @@
         android:layout_marginBottom="16dp"
         android:text="@string/antigua"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintStart_toEndOf="@+id/button6" />
+        app:layout_constraintEnd_toStartOf="@+id/semuc_button"
+        app:layout_constraintStart_toEndOf="@+id/tikal_button" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/semuc_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -142,10 +143,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="@string/semuc"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/antigua_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.411"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/antigua_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
