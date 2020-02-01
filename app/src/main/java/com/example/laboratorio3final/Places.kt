@@ -16,9 +16,9 @@ class Places : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val prueba:Modelo=Modelo(getString(R.string.tikal), "ESTO ES SUBTITULO","Descripcion")
-        val prueba1:Modelo=Modelo("ESTO FUNCIONO2", "ESTO ES SUBTITULO","Descripcion")
-        val prueba2:Modelo=Modelo("ESTO FUNCIONO3", "ESTO ES SUBTITULO","Descripcion")
+        val prueba:Modelo=Modelo(getString(R.string.tikal), "ESTO ES SUBTITULO",getString(R.string.bio))
+        val prueba1:Modelo=Modelo(getString(R.string.antigua), "ESTO ES SUBTITULO","Descripcion")
+        val prueba2:Modelo=Modelo(getString(R.string.semuc), "ESTO ES SUBTITULO","Descripcion")
 
         super.onCreate(savedInstanceState)
 
