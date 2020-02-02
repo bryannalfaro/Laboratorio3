@@ -9,6 +9,11 @@ import com.example.laboratorio3final.R
 import com.example.laboratorio3final.databinding.ActivityPlacesBinding
 import com.example.laboratorio3final.models.Modelo
 
+/**
+ * @author Bryann Alfaro
+ * @since February 2,  2020
+ */
+
 class Places : AppCompatActivity() {
     //binding for this activity
     private lateinit var binding1:ActivityPlacesBinding

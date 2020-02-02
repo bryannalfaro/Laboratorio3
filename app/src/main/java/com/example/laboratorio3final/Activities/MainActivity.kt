@@ -10,6 +10,12 @@ import androidx.databinding.DataBindingUtil
 import com.example.laboratorio3final.R
 import com.example.laboratorio3final.databinding.ActivityMainBinding
 
+/**
+ * @author Bryann Alfaro
+ * @since February 2,  2020
+ * Main activity for the application about Guatemala
+ */
+
 class MainActivity : AppCompatActivity() {
 
     //Creates the binding connection
